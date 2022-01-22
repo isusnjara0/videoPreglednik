@@ -1,6 +1,4 @@
 <?php
-
-
 $xmlDoc=new DOMDocument();
 $xmlDoc->load("links.xml");
 
@@ -12,7 +10,6 @@ $q=$_GET["q"];
 //lookup all links from the xml file if length of q>0
 if (strlen($q)>0) {
   $hint="";
-  /*
   for($i=0; $i<($x->length); $i++) {
     $y=$x->item($i)->getElementsByTagName('title');
     $z=$x->item($i)->getElementsByTagName('url');
@@ -32,9 +29,9 @@ if (strlen($q)>0) {
         }
       }
     }
-  }*/
+  }
 }
-*/
+
 // Set output to "no suggestion" if no hint was found
 // or to the correct values
 if ($hint=="") {
