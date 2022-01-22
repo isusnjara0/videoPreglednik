@@ -1,9 +1,11 @@
 function showResult(str) {
     if (str.length==0) {
-        alert('radi!');
       document.getElementById("livesearch").innerHTML="";
       document.getElementById("livesearch").style.border="0px";
       return;
+    }
+    else{
+        document.getElementById("livesearch").innerHTML="nije prazno!";
     }
     var xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange=function() {
