@@ -5,6 +5,7 @@ $(document).ready(function(){
     voiceWidth = parseFloat($('#voice-button').css('width'), 10) + parseFloat($('#voice-button').css('margin-left'), 10);
     formWidth = contWidth - iconWidth - voiceWidth;
     $('#search-form').css('width', formWidth+'px');
+    $('#search-sug').css('width', formWidth+'px');
 
     $(".circle").click(function(){
       $(".pozadina").css('background-color', 'red');

@@ -215,3 +215,14 @@ h1, h2, h3, h4, h5, p{
     height: 40px;
     width: 260px;
 }
+
+#search-sug{
+    position: absolute;
+    top:47px;
+    left: calc(100% / 3);
+    background-color: #fff;
+}
+#livesearch{
+    width:100%;
+    height: 100%;
+}
