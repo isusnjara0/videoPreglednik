@@ -1,17 +1,14 @@
 <?php
-$xmlDoc=new DOMDocument();
-$xmlDoc->load("links.xml");
-
-$x=$xmlDoc->getElementsByTagName('link');
-
-$q=$_GET["q"];
+$q=$_POST["q"];
 
 if (strlen($q)>0) {
-  $hint="";
   $hint = '<ul>
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li></ul>';
+}
+else{
+    $hint = '';
 }
 
 if ($hint=="") {
