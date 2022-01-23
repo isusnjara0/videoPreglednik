@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#search').keypress(function(){
+    $('#search').keyup(function(){
         if($('#search').val()!=''){
             $.ajax({
                 type: 'POST',
@@ -16,5 +16,14 @@ $(document).ready(function(){
 
             });
         }
+    });
+
+    $("body").on('click','li', function(){
+        $('#search').val($(this).html());
+    });
+
+    $('#search-icon').on('click', function(){
+        $("#search-form").submit();
+
     });
 });

@@ -7,9 +7,26 @@ $(document).ready(function(){
     $('#search-form').css('width', formWidth+'px');
     $('#search-sug').css('width', formWidth+'px');
 
+    divWidth = parseFloat($('.vlist').css('width'), 10);
+    $('.vlist').css('height',divWidth/1.77+'px');
+
     $(".circle").click(function(){
-      $(".pozadina").css('background-color', 'red');
-      
-      alert('Ukupno: '+ contWidth+' icon: '+iconWidth+' voice: '+voiceWidth+' forma: '+formWidth);
+      circle = $(this);
+      circle.css('background-color', 'dimgray');
+      circle.css('transition','all 1s ease');
+
+      setTimeout(function(){
+        circle.css('background-color', 'inherit');
+        circle.css('border', '1px solid gray');
+        circle.css('transition','empty');
+
+
+      }, 250)
+
+
+      setTimeout(function(){
+        circle.css('border', 'none');
+        $('#voice-button').css('background-color', '#181818');
+      }, 500)
     });
 });

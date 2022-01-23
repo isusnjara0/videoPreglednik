@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-y: scroll;
-    background-color: #181818;
+    background-color: #181818 !important;
 }
 
 h1, h2, h3, h4, h5, p{
@@ -94,6 +94,20 @@ h1, h2, h3, h4, h5, p{
     color:hsla(0, 100%, 100%, 0.88)
 }
 
+#search-ul{
+    list-style-type: none;
+    margin-left: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.search-li{
+    text-decoration: none;
+}
+
+.search-li:hover{
+    background-color: #181818;
+    color:hsla(0, 100%, 100%, 0.88);
+}
 
 #center{
     display: flex;
@@ -203,9 +217,6 @@ h1, h2, h3, h4, h5, p{
     height: 40px;
     border-radius: 100%;
 }
-.circle:hover{
-    background-color: #181818;
-}
 
 #menu{
     width: 100%;
@@ -213,7 +224,7 @@ h1, h2, h3, h4, h5, p{
 
 #logo img{
     height: 40px;
-    width: 260px;
+    width: 10em;
 }
 
 #search-sug{
@@ -225,4 +236,14 @@ h1, h2, h3, h4, h5, p{
 #livesearch{
     width:100%;
     height: 100%;
+}
+
+.vlist{
+    background-color: hsla(0, 100%, 100%, 0.88);
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid black;
+}
+.vlist:hover{
+    background-color: indigo;
 }

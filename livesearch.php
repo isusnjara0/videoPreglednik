@@ -1,28 +1,25 @@
 <?php
-
+include 'db.php';
 $izlaz='';
-if(!empty($_REQUEST["q"])){
-    $q = $_REQUEST["q"];
+if(!empty($_REQUEST["name"])){
+    $q = $_REQUEST["name"];
+    $sql = "SELECT * FROM artist WHERE Name LIKE '".$q."%';"; 
+    $result = $conn->query($sql);
 
-    if (strlen($q)>0) {
-    $hint = '<ul>
-    <li>Coffee</li>
-    <li>Tea</li>
-    <li>Milk</li></ul>';
+    $hint = '';
+    if ($result->num_rows > 0) {
+        // output data of each row
+        $hint = '<ul id="search-ul">';
+        while($row = $result->fetch_assoc()) {
+            $hint = $hint . '<li class="search-li px-3 py-1">' .$row["Name"]. "</li>";
+        }
+        $izlaz = $hint . '</ul>';
+        //$izlaz = 'ima rezultata';
     }
     else{
-        $hint = '';
+        $izlaz = 'nema rezultata';
     }
-
-    if ($hint=="") {
-    $izlaz="no suggestion";
-    } else {
-    $izlaz=$hint;
-    }
+    echo $izlaz;
+    $conn->close();
 }
-else{
-    $izlaz = 'POST is empty';
-}
-
-echo $izlaz;
 ?> 
