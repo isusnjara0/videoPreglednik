@@ -15,10 +15,10 @@ else{
 }
 
 if ($hint=="") {
-  $response="no suggestion";
+  $izlaz="no suggestion";
 } else {
-  $response=$hint;
+  $izlaz=$hint;
 }
 
-echo $response;
+echo $izlaz;
 ?> 
