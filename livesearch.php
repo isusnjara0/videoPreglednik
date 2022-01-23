@@ -1,4 +1,7 @@
 <?php
+
+header('Content-type: text/html');
+
 $q=$_GET["q"];
 
 if (strlen($q)>0) {
