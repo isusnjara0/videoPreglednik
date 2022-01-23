@@ -1,23 +1,27 @@
 <?php
 
-header('Content-type: text/html');
+$izlaz='';
+if(!empty($_REQUEST["q"])){
+    $q = $_REQUEST["q"];
 
-$q=$_GET["q"];
+    if (strlen($q)>0) {
+    $hint = '<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li></ul>';
+    }
+    else{
+        $hint = '';
+    }
 
-if (strlen($q)>0) {
-  $hint = '<ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li></ul>';
+    if ($hint=="") {
+    $izlaz="no suggestion";
+    } else {
+    $izlaz=$hint;
+    }
 }
 else{
-    $hint = '';
-}
-
-if ($hint=="") {
-  $izlaz="no suggestion";
-} else {
-  $izlaz=$hint;
+    $izlaz = 'POST is empty';
 }
 
 echo $izlaz;

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#search').keypress(function(){
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             url: 'livesearch.php',
             data:{
                 name:$('#search').val(),
