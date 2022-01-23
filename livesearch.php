@@ -1,5 +1,5 @@
 <?php
-$q=$_POST["q"];
+$q=$_GET["q"];
 
 if (strlen($q)>0) {
   $hint = '<ul>
