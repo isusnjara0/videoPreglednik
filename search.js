@@ -26,4 +26,9 @@ $(document).ready(function(){
         $("#search-form").submit();
 
     });
+
+    $('.vlist').on('click', function(){
+        id = $(this).html();
+        window.location = 'results.php?id='+id;
+    });
 });

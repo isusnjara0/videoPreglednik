@@ -165,7 +165,10 @@ h1, h2, h3, h4, h5, p{
 }
 
 .video_container{
-   width: 640px;
+}
+
+#player > video{
+    width: 100px;
 }
 
 .pozadina{
@@ -246,4 +249,8 @@ h1, h2, h3, h4, h5, p{
 }
 .vlist:hover{
     background-color: indigo;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
 }

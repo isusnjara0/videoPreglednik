@@ -1,12 +1,18 @@
+<?php
+if(!empty($_REQUEST['id'])){
+        $var = $_REQUEST['id'];
+}?>
+
 <div class="row pozadina">
-    <div class="col-8 p-3">
+    <div id="videoSekcija" class="col-8 p-3">
         <div id="player" class="d-flex align-items-center justify-content-center video_container mx-auto">
-            <video class="fullscreen-video" width="640" height="360" controls>
-                <source src="movie.mp4" type="video/mp4">
-            </video>
+           <!-- <video class="fullscreen-video" controls>
+                <source src="https://drive.google.com/file/d/1JIW2PDAAtVXY99edDZe_6bGPGAqVE7Lq/view?usp=sharing" type="video/mp4">
+            </video> !-->
+            <embed src="https://drive.google.com/file/d/1JIW2PDAAtVXY99edDZe_6bGPGAqVE7Lq/preview">
         </div>
         <div id="info" class="video_container mx-auto">
-            <h1>Naslov videozapisa</h1>
+            <h1>Videozapis <?php echo $var;?></h1>
         </div>
         <div id="meta" class="video_container mx-auto">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat veniam, consectetur laudantium voluptates veritatis nemo libero reprehenderit harum tenetur exercitationem, voluptate incidunt dolor nam sit sunt maxime obcaecati eos illo.</p>

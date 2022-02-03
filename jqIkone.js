@@ -8,7 +8,7 @@ $(document).ready(function(){
     $('#search-sug').css('width', formWidth+'px');
 
     divWidth = parseFloat($('.vlist').css('width'), 10);
-    $('.vlist').css('height',divWidth/1.77+'px');
+    $('.vlist').css('height',divWidth/(16/9)+'px');
 
     $(".circle").click(function(){
       circle = $(this);
@@ -29,4 +29,10 @@ $(document).ready(function(){
         $('#voice-button').css('background-color', '#181818');
       }, 500)
     });
+
+    $('.video_container').css('width'
+    ,$('#videoSekcija').css('width'));
+    $('embed').css('width',$('#videoSekcija').css('width'));
+    $('embed').css('height',((parseFloat($('embed').css('width'), 10))/(16/9))+'px')
+
 });
